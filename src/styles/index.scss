@@ -1,0 +1,15 @@
+@import '../features/flights/components/main/main.scss';
+@import '../features/flights/components/board/board.scss';
+@import '../features/flights/components/board-buttons/board-btns.scss';
+@import '../features/flights/components/table-list/table-list.scss';
+@import '../features/flights/components/table-descrptn/table-descrptn.scss';
+@import '../features/flights/components/search/search.scss';
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}

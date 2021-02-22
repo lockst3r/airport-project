@@ -1,0 +1,25 @@
+.btn-section {
+  width: 100%;
+  background-color: rgb(120, 160, 250);
+  border-radius: 50px 50px 0 0;
+}
+
+.board-btn {
+  margin: auto 0;
+  width: 50%;
+  height: 4em;
+  border: none;
+  background-color: rgb(120, 160, 250);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  &__right {
+    border-radius: 0 50px 0 0;
+    background-color: #fff;
+    color: rgb(120, 160, 250);
+  }
+  &__left {
+    border-radius: 50px 0 0 0;
+  }
+}

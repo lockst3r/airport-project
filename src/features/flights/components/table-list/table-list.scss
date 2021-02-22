@@ -1,0 +1,25 @@
+.table-list {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__item {
+    height: 4em;
+    background: #fff;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 50px;
+  height: 25px;
+  margin-right: 10%;
+}
+
+li:nth-child(even) {
+  background-color: rgba(90, 130, 160, 0.007);
+}
