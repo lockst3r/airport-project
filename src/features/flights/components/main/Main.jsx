@@ -1,14 +1,27 @@
 import React from 'react';
-import Search from '../search/Search'
-import Board from '../board/Board'
+import Search from '../search/Search';
+import Board from '../board/Board';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as flightsActions from '../../flights.actions';
 
-const Main = () => {
+const Main = ({ setFilterText }) => {
   return (
     <main className="main">
-      <Search />
-      <Board />
+      <BrowserRouter>
+        <Search setFilterText={setFilterText} />
+        <Switch>
+          <Route path="/:direction?/:flight?">
+            <Board />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </main>
   );
 };
 
-export default Main;
+const mapDispatch = {
+  setFilterText: flightsActions.setFilterText,
+};
+
+export default connect(null, mapDispatch)(Main);

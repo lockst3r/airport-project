@@ -1,12 +1,25 @@
 import React from 'react';
+import classNames from "classnames";
 
-const BoardBtns = () => {
+const BoardBtns = ({arrivalClick,
+  departureClick,
+  handleChangeDepartures,
+  handleChangeArrivals}) => {
+
+    const arrivalClass = classNames("board-btn board-btn__right", {
+      clicked: arrivalClick,
+    });
+    const departureClass = classNames("board-btn board-btn__left", {
+      clicked: departureClick,
+    });
+
+
   return (
     <div className="btn-section">
-      <button className="board-btn board-btn__left">
+      <button className={departureClass} onClick={handleChangeDepartures}>
         Departures
       </button>
-      <button className="board-btn board-btn__right">
+      <button className={arrivalClass} onClick={handleChangeArrivals}>
         Arrivals
       </button>
   </div>
