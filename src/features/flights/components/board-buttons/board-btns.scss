@@ -2,23 +2,25 @@
   width: 100%;
   background-color: $background-color-blue;
   border-radius: 50px 50px 0 0;
-}
-
-.board-btn {
-  margin: auto 0;
-  width: 50%;
-  height: 4em;
-  border: none;
-  background-color: $background-color-blue;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: $text-color-white;
-  cursor: pointer;
-  &__right {
-    border-radius: 0 50px 0 0;
+  &__icon {
+    margin-right: 20px;
   }
-  &__left {
-    border-radius: 50px 0 0 0;
+  &__button {
+    margin: auto 0;
+    width: 50%;
+    height: 4em;
+    border: none;
+    background-color: $background-color-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $text-color-white;
+    cursor: pointer;
+    &__right {
+      border-radius: 0 50px 0 0;
+    }
+    &__left {
+      border-radius: 50px 0 0 0;
+    }
   }
 }
 
