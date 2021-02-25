@@ -1,6 +1,6 @@
 .btn-section {
   width: 100%;
-  background-color: rgb(120, 160, 250);
+  background-color: $background-color-blue;
   border-radius: 50px 50px 0 0;
 }
 
@@ -9,17 +9,21 @@
   width: 50%;
   height: 4em;
   border: none;
-  background-color: rgb(120, 160, 250);
+  background-color: $background-color-blue;
   text-transform: uppercase;
   font-weight: 700;
-  color: rgb(255, 255, 255);
+  color: $text-color-white;
   cursor: pointer;
   &__right {
     border-radius: 0 50px 0 0;
-    background-color: #fff;
-    color: rgb(120, 160, 250);
   }
   &__left {
     border-radius: 50px 0 0 0;
   }
+}
+
+.clicked {
+  color: $text-color-blue;
+  background-color: $background-color-white;
+  border-radius: 50px 50px 0 0;
 }

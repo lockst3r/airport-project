@@ -8,7 +8,7 @@
 
   &__item {
     height: 4em;
-    background: #fff;
+    background: $background-color-white;
     display: flex;
     align-items: center;
   }
@@ -21,5 +21,5 @@
 }
 
 li:nth-child(even) {
-  background-color: rgba(90, 130, 160, 0.007);
+  background-color: $background-color-gray;
 }

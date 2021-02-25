@@ -1,5 +1,7 @@
 import React from 'react';
 import classNames from "classnames";
+import { Link, Switch, Route } from "react-router-dom";
+
 
 const BoardBtns = ({arrivalClick,
   departureClick,
@@ -16,12 +18,22 @@ const BoardBtns = ({arrivalClick,
 
   return (
     <div className="btn-section">
+      <Link to="/departures">
       <button className={departureClass} onClick={handleChangeDepartures}>
+      <i className="fas fa-plane-departure"></i>
         Departures
       </button>
+      </Link>
+      <Link to="/arrivals">
       <button className={arrivalClass} onClick={handleChangeArrivals}>
+      <i className="fas fa-plane-arrival"></i>
         Arrivals
       </button>
+      </Link>
+      <Switch>
+        <Route path={"/departures"}></Route>
+        <Route path={"/arrivals"}></Route>
+      </Switch>
   </div>
   );
 };

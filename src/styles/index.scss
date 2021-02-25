@@ -1,3 +1,4 @@
+@import './variables.scss';
 @import '../features/flights/components/main/main.scss';
 @import '../features/flights/components/board/board.scss';
 @import '../features/flights/components/board-buttons/board-btns.scss';
@@ -11,5 +12,6 @@
 }
 
 body {
+  background-color: $background-color-light-gray;
   font-family: 'Roboto', sans-serif;
 }
