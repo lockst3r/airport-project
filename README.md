@@ -1,8 +1,8 @@
-## Calendar Project
+## Airport Scoreboard
 ------------------
-The calendar is designed for planning your time with the ability to add tasks.
+This application is designed to view air flights that are departing or arriving, as well as to search for them by airline, destination or flight number.
 
-To launch the application click on the link ***[Calendar Project](https://youthful-wiles-0ca6d4.netlify.app)***
+To launch the application click on the link ***[Airport Scoreboard](https://youthful-wiles-0ca6d4.netlify.app/)***
 
 In the project directory, you can run:
 
@@ -14,7 +14,8 @@ The page will reload if you make edits.\
 Builds the app for production to the build folder.\
 
 **The tech stack is:**
-* React
+* React 
+* Redux
 * Webpack
 * ES6 syntax
 * HTML5
