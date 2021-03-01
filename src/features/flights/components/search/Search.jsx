@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 
 const SearchForm = ({ setFilterText }) => {
-  const [filterText, settFilterText] = useState('');
+  const [filterText, saveFilterText] = useState('');
 
   const history = useHistory();
   const location = useLocation();
@@ -25,7 +25,7 @@ const SearchForm = ({ setFilterText }) => {
             className="search__form-input"
             type="text"
             value={filterText}
-            onChange={e => settFilterText(e.target.value)}
+            onChange={e => saveFilterText(e.target.value)}
             placeholder="Airline, destination or flight #"
           />
           <i className="fas fa-search"></i>

@@ -4,6 +4,7 @@ import Board from '../board/Board';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as flightsActions from '../../flights.actions';
+import PropTypes from 'prop-types';
 
 const Main = ({ setFilterText }) => {
   return (
@@ -16,6 +17,10 @@ const Main = ({ setFilterText }) => {
       </Switch>
     </main>
   );
+};
+
+Main.propTypes = {
+  setFilterText: PropTypes.func.isRequired,
 };
 
 const mapDispatch = {

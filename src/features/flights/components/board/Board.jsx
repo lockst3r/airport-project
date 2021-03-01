@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react';
-import { Switch, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Switch, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as flightsActions from '../../flights.actions';
 import BoardBtns from '../board-buttons/BoardBtns';
@@ -27,7 +28,7 @@ const Board = ({ flightsList, arrivalClick, departureClick, getArrivalList, getD
       <div className="board__table">
         <TableDescrptn />
         <Switch>
-        <TableList flightsList={flightsList} />
+          <TableList flightsList={flightsList} />
         </Switch>
       </div>
     </div>
@@ -45,6 +46,14 @@ const mapState = state => {
     arrivalClick: flightsSelectors.flightsArrivalClick(state),
     departureClick: flightsSelectors.flightsDepartureClick(state),
   };
+};
+
+Board.propTypes = {
+  flightsList: PropTypes.arrayOf(PropTypes.shape()),
+  arrivalClick: PropTypes.bool,
+  departureClick: PropTypes.bool,
+  getDepartureList: PropTypes.func.isRequired,
+  getArrivalList: PropTypes.func.isRequired,
 };
 
 export default connect(mapState, mapDispatch)(Board);

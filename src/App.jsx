@@ -7,9 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 const App = () => {
   return (
     <BrowserRouter>
-    <Provider store={store}>
-      <Main />
-    </Provider>
+      <Provider store={store}>
+        <Main />
+      </Provider>
     </BrowserRouter>
   );
 };

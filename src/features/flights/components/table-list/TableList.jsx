@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { setTime } from '../../utils/dateUtils';
 import { green, blue } from '../../utils/styleUtils';
 
@@ -27,5 +28,18 @@ const TableList = ({ flightsList }) => (
     })}
   </ul>
 );
+
+TableList.propTypes = {
+  flightsList: PropTypes.arrayOf(
+    PropTypes.shape({
+      terminal: PropTypes.string,
+      localTime: PropTypes.string,
+      status: PropTypes.string,
+      airlineLogo: PropTypes.string,
+      airlineName: PropTypes.string,
+      flight: PropTypes.string,
+    }),
+  ),
+};
 
 export default TableList;
